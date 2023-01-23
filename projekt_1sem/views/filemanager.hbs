@@ -1,0 +1,42 @@
+<div class="header">
+    <a class="center" href="/upload">UPLOAD</a>
+    <a class="center selected" href="/filemanager">FILEMANAGER</a>
+    <a class="center" href="/info">INFO</a>
+</div>
+
+<main>
+    <div class="sidebar">
+        <p>Manage your files</p>
+        <a href="/deleteAll">Delete all files</a>
+    </div>
+
+    <div class="mainbox">
+        <table>
+            <tr>
+                <td>id</td>
+                <td>obraz</td>
+                <td>name</td>
+                <td>size</td>
+                <td>type</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            {{#each images}}
+                <tr>
+                    <td>{{lp}}</td>
+                    <td><img class="filetype" src="{{image}}"></td>
+                    <td>{{name}}</td>
+                    <td>{{size}}</td>
+                    <td>{{type}}</td>
+                    <td><a href="/show/{{lp}}">SHOW</a></td>
+                    <td><a href="/info/{{lp}}">INFO</a></td>
+                    <td><a href="/download/{{lp}}">DOWNLOAD</a></td>
+                    <td><a href="/delete/{{lp}}">DELETE</a></td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</main>

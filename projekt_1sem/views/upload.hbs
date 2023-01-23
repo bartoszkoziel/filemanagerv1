@@ -1,0 +1,18 @@
+<div class="header">
+    <a class="center selected" href="/upload">UPLOAD</a>
+    <a class="center" href="/filemanager">FILEMANAGER</a>
+    <a class="center" href="/info">INFO</a>
+</div>
+
+<main>
+    <div class="sidebar">
+        <p>UPLOAD MULTIPLE FILES</p>
+    </div>
+
+    <div class="mainbox">
+        <form enctype="multipart/form-data" method="POST" action="/handleUpload">
+            <input type="file" multiple required accept="image/*" name="imagetoupload">
+            <input type="submit">
+        </form>
+    </div>
+</main>
